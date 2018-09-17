@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.GRAY,
     paddingHorizontal: SPACING.SMALL,
     paddingVertical: SPACING.SMALL,
+    marginBottom: SPACING.NORMAL,
     borderRadius: BORDER_RADIUS.SMALL
   }
 });

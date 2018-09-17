@@ -96,7 +96,8 @@ const postStyles = StyleSheet.create({
   },
   barContainer: {
     paddingHorizontal: SPACING.NORMAL,
-    flexDirection: "row"
+    flexDirection: "row",
+    flexWrap: "wrap"
   },
   reactions: {
     flexDirection: "row",
@@ -149,7 +150,6 @@ class Post extends React.PureComponent {
     }
 
     if (currentUser.id === post.user.id) {
-      options.push(POSSIBLE_OPTIONS.edit_post);
       options.push(POSSIBLE_OPTIONS.delete_post);
     }
 
@@ -176,9 +176,7 @@ class Post extends React.PureComponent {
         const option =
           POSSIBLE_OPTIONS[_.invert(POSSIBLE_OPTIONS)[options[buttonIndex]]];
 
-        if (option === POSSIBLE_OPTIONS.edit_post) {
-          this.props.onEditPost(this.props.post);
-        } else if (option === POSSIBLE_OPTIONS.delete_post) {
+        if (option === POSSIBLE_OPTIONS.delete_post) {
           onDelete(post.id);
         } else if (option === POSSIBLE_OPTIONS.report) {
           this.props.onReport(this.props.post.id);
@@ -256,6 +254,7 @@ class Post extends React.PureComponent {
           <React.Fragment>
             <Divider height={SPACING.NORMAL} />
             <PhotoGroup photos={photos} onPressPhoto={this.handleShowGallery} />
+            <Divider height={SPACING.NORMAL} />
           </React.Fragment>
         )}
 
@@ -282,9 +281,7 @@ class Post extends React.PureComponent {
             commented={commented}
             commentsCount={commentsCount}
           />
-
         </View>
-        <Divider height={ SPACING.NORMAL } />
         <Divider height={1} width={"100%"} border={COLORS.GRAY} />
         {!!commentPreview && (
           <React.Fragment>

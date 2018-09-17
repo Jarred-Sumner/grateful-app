@@ -9,7 +9,6 @@ import io.sentry.RNSentryPackage;
 import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import io.underscope.react.fbak.RNAccountKitPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.RNTextInputMask.RNTextInputMaskPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import im.shimo.react.prompt.RNPromptPackage;
 import com.oblador.keychain.KeychainPackage;
@@ -41,7 +40,6 @@ public class MainApplication extends Application implements ReactApplication {
             new PickerPackage(),
             new RNAccountKitPackage(),
             new VectorIconsPackage(),
-            new RNTextInputMaskPackage(),
             new SplashScreenReactPackage(),
             new RNPromptPackage(),
             new KeychainPackage(),

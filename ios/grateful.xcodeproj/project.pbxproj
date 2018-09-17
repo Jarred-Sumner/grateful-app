@@ -48,7 +48,6 @@
 		A0E52430B38848928CF4337A /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CFAA03C185A41439528E680 /* Ionicons.ttf */; };
 		ACCCDD963FBF4C9D91D89319 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F82E3A6E1E944D89FD199CC /* Zocial.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		B88CDA0C17BA4FEBBF3873EF /* libRNTextInputMask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FBA29B9A8B4B8D9525C63A /* libRNTextInputMask.a */; };
 		C213C48681344DA8AB297E16 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77B0243248674407955B1E4F /* OpenSans-SemiboldItalic.ttf */; };
 		C30DDBDCE2FC45D6879A69E7 /* libRNKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6605A079C748B6809CF781 /* libRNKeychain.a */; };
 		CEDD44BFBA544D069B9CC50C /* fontello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9EEDE4027FE4C9A8D64C335 /* fontello.ttf */; };
@@ -378,13 +377,6 @@
 			remoteGlobalIDString = 39DF4FE71E00394E00F5B4B2;
 			remoteInfo = RCTCustomInputController;
 		};
-		83484249214DF047007B4607 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16F561616E82451C90696F1A /* RNTextInputMask.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00278A001F2F25CE0023E794;
-			remoteInfo = RNTextInputMask;
-		};
 		8348424E214DF047007B4607 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1CD34DCA152644BD81EA5B5B /* RNVectorIcons.xcodeproj */;
@@ -424,7 +416,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = grateful/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = grateful/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		16F561616E82451C90696F1A /* RNTextInputMask.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNTextInputMask.xcodeproj; path = "../node_modules/react-native-text-input-mask/ios/RNTextInputMask/RNTextInputMask.xcodeproj"; sourceTree = "<group>"; };
 		182019961A04484782D7F590 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Semibold.ttf"; path = "../assets/fonts/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		1AB26CEFBA7546E0AA8FC7F5 /* RCTContacts.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTContacts.xcodeproj; path = "../node_modules/react-native-contacts/ios/RCTContacts.xcodeproj"; sourceTree = "<group>"; };
 		1CD34DCA152644BD81EA5B5B /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
@@ -471,7 +462,6 @@
 		C159FC2387994759B15C5BAA /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../assets/fonts/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		C5F24AA4EF324230BE0B5F94 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Light.ttf"; path = "../assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		D6EC3AEFA1864A5EA0EBBB38 /* RNAccountKit.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAccountKit.xcodeproj; path = "../node_modules/react-native-facebook-account-kit/ios/RNAccountKit.xcodeproj"; sourceTree = "<group>"; };
-		D8FBA29B9A8B4B8D9525C63A /* libRNTextInputMask.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTextInputMask.a; sourceTree = "<group>"; };
 		DA6D5FF99E7F4D8BBA856879 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Italic.ttf"; path = "../assets/fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		EEE688E172DE4939B67B4116 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		F2D4525313554FFC92B88EA4 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
@@ -500,7 +490,6 @@
 				126EA85D3A0B41D787E2B73F /* libKeyboardTrackingView.a in Frameworks */,
 				C30DDBDCE2FC45D6879A69E7 /* libRNKeychain.a in Frameworks */,
 				6B866F624DD64FEF94E050CF /* libSplashScreen.a in Frameworks */,
-				B88CDA0C17BA4FEBBF3873EF /* libRNTextInputMask.a in Frameworks */,
 				FC8F74D7481E4B5F9417817F /* libRNVectorIcons.a in Frameworks */,
 				FC6CCC30571A4B55B0F32132 /* libRNAccountKit.a in Frameworks */,
 				D33B38A218098F6EE3C0ED0E /* libPods-grateful.a in Frameworks */,
@@ -678,7 +667,6 @@
 				8D606C1248554A06BAAE20F7 /* KeyboardTrackingView.xcodeproj */,
 				3CB31AEFC3A740C0AAE4C1DA /* RNKeychain.xcodeproj */,
 				9D4FC33B278F4F8C87CCCFC8 /* SplashScreen.xcodeproj */,
-				16F561616E82451C90696F1A /* RNTextInputMask.xcodeproj */,
 				1CD34DCA152644BD81EA5B5B /* RNVectorIcons.xcodeproj */,
 				D6EC3AEFA1864A5EA0EBBB38 /* RNAccountKit.xcodeproj */,
 			);
@@ -703,7 +691,6 @@
 				6939671B400A4850A83E3EAF /* libKeyboardTrackingView.a */,
 				5A6605A079C748B6809CF781 /* libRNKeychain.a */,
 				465B2318461D4E0AB6A3D70F /* libSplashScreen.a */,
-				D8FBA29B9A8B4B8D9525C63A /* libRNTextInputMask.a */,
 				3258465F66E949EC8879453F /* libRNVectorIcons.a */,
 				324C5116C7AA4EA1AE263AA0 /* libRNAccountKit.a */,
 				6883F079EAEE4304AB4CA558 /* libRNDeviceInfo-tvOS.a */,
@@ -765,14 +752,6 @@
 			isa = PBXGroup;
 			children = (
 				83484245214DF047007B4607 /* libRCTCustomInputController.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		83484246214DF047007B4607 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8348424A214DF047007B4607 /* libRNTextInputMask.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -989,10 +968,6 @@
 				{
 					ProductGroup = 83484221214DF046007B4607 /* Products */;
 					ProjectRef = 3CB31AEFC3A740C0AAE4C1DA /* RNKeychain.xcodeproj */;
-				},
-				{
-					ProductGroup = 83484246214DF047007B4607 /* Products */;
-					ProjectRef = 16F561616E82451C90696F1A /* RNTextInputMask.xcodeproj */;
 				},
 				{
 					ProductGroup = 8348424B214DF047007B4607 /* Products */;
@@ -1326,13 +1301,6 @@
 			remoteRef = 83484244214DF047007B4607 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8348424A214DF047007B4607 /* libRNTextInputMask.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNTextInputMask.a;
-			remoteRef = 83484249214DF047007B4607 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		8348424F214DF047007B4607 /* libRNVectorIcons.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1528,7 +1496,6 @@
 					"$(SRCROOT)/../node_modules/react-native-keyboard-tracking-view/lib",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
-					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/RNTextInputMask/RNTextInputMask/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 				);
@@ -1562,7 +1529,6 @@
 					"$(SRCROOT)/../node_modules/react-native-keyboard-tracking-view/lib",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
-					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/RNTextInputMask/RNTextInputMask/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 				);

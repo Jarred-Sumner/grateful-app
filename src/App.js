@@ -100,17 +100,10 @@ const URI_PREFIX = "grateful://grateful/";
 
 const AppContainer = createStackNavigator(
   {
-    App: createStackNavigator(
-      {
-        Feed: {
-          screen: FeedPage,
-          path: "feed"
-        }
-      },
-      {
-        // headerMode: "none"
-      }
-    ),
+    Feed: {
+      screen: FeedPage,
+      path: "feed"
+    },
     ViewPost: {
       screen: ViewPostPage,
       path: "feed/:postID"
@@ -125,8 +118,7 @@ const AppContainer = createStackNavigator(
     }
   },
   {
-    mode: "modal",
-    headerMode: "none"
+    mode: "modal"
   }
 );
 
@@ -172,7 +164,7 @@ class RootApp extends React.Component {
     isLoading: true,
     appState: AppState.currentState,
     pendingNotifications: [],
-    jwt: Storage.getJWT()
+    jwt: Storage.getCachedJWT()
   });
   constructor(props) {
     super(props);

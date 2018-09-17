@@ -154,7 +154,8 @@ export class PhotoGroup extends React.PureComponent {
             styles.container,
             {
               // flexWrap: "wrap",
-              flex: 0,
+              flex: 1,
+              alignItems: "center",
               overflow: "hidden"
             }
           ]}

@@ -22,6 +22,7 @@ import {
 import Queries from "../lib/Queries";
 import Header from "../components/Header";
 import HeaderLogoImage from "../../assets/HeaderLogo.png";
+import { Icon } from "../components/Icon";
 
 const SeparatorComponent = defaultProps({
   height: SPACING.SMALL,
@@ -96,7 +97,6 @@ class _FeedSectionList extends React.PureComponent {
       <Post
         post={item}
         onDelete={this.handleDeletePost}
-        onEditPost={this.props.onEditPost}
         onViewPost={this.props.onViewPost}
         onReport={this.props.onReportPost}
       />
@@ -111,7 +111,7 @@ class _FeedSectionList extends React.PureComponent {
     }
   };
 
-  handleLoadMore = data => {
+  handleLoadMore = _.debounce(data => {
     return this.props.data.fetchMore({
       variables: {
         offset: this.props.data.Posts.length + 1
@@ -130,24 +130,25 @@ class _FeedSectionList extends React.PureComponent {
         };
       }
     });
-  };
+  }, 200);
 
   render() {
     return (
       <SectionList
         sections={this.state.sections}
-        keyboardShouldPersistTaps="interactive"
-        initialNumToRender={3}
+        keyboardDismissMode="interactive"
+        directionalLockEnabled
+        keyboardShouldPersistTaps="always"
         directionLockEnabled
         ref={this.props.sectionListRef}
         refreshing={this.props.data.networkStatus === 4}
-        style={GLOBAL_STYLES.section_list} // ListHeaderComponent={this.renderHeader()}
-        contentContainerStyle={{ backgroundColor: COLORS.WHITE }}
+        style={{ flex: 1 }}
+        contentContainerStyle={
+          { backgroundColor: COLORS.WHITE } // ListHeaderComponent={this.renderHeader()}
+        }
         ListEmptyComponent={this.renderEmpty()}
         renderItem={this.renderItem}
         onEndReached={this.handleLoadMore}
-        onScroll={this.props.onScroll}
-        scrollEventThrottle={50}
         onRefresh={this.props.data.refetch}
         onEndReachedThreshold={0.5}
         extraData={this.props.extraData}
@@ -220,7 +221,7 @@ class RawPostComposer extends React.PureComponent {
     this.props.mutate({
       variables: {
         body: body.substr(POST_PREFIX.length),
-        photos,
+        photos: photos.map(({ id }) => id),
         visibility: isPublic ? "publicly_visible" : "privately_visible"
       }
     });
@@ -266,18 +267,6 @@ class FeedPage extends React.PureComponent {
     });
   };
 
-  handleEditPost = post => {
-    this.props.navigation.navigate("EditPost", {
-      id: post.id
-    });
-  };
-
-  handlePressAdd = () => {
-    this.props.navigation.navigate("CreatePost", {
-      id: this.props.activeGroupId
-    });
-  };
-
   handleReportPost = id => {
     return this.props.createReport({
       id,
@@ -297,7 +286,6 @@ class FeedPage extends React.PureComponent {
         <FeedSectionList
           colorScheme={colorScheme}
           onViewPost={this.handleViewPost}
-          onEditPost={this.handleEditPost}
           onReportPost={this.handleReportPost}
           sectionListRef={this.getSectionListRef}
         />
@@ -329,13 +317,30 @@ const App = compose(
   </EmojiInputProvider>
 ));
 
-App.navigationOptions = {
+App.navigationOptions = ({ navigation }) => ({
   headerStyle: { height: 60 },
+  headerLeft: (
+    <View
+      style={{
+        paddingHorizontal: SPACING.NORMAL,
+        alignItems: "center",
+        width: 80,
+        zIndex: 10,
+        flex: 1
+      }}
+      onPress={() => navigation.navigate("Settings")}
+    >
+      <Icon
+        name="profile"
+        color={new ColorScheme(APP_COLOR_SCHEME).primaryColor}
+      />
+    </View>
+  ),
   headerTitle: props => (
     <SafeAreaView style={{ paddingVertical: SPACING.NORMAL }}>
       <Image source={require("../../assets/HeaderLogo.png")} />
     </SafeAreaView>
   )
-};
+});
 
 export default App;

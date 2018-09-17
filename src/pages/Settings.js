@@ -52,12 +52,6 @@ class SettingsPage extends React.Component {
         >
           <Row multiple label="Account">
             <PickerRowItem
-              onPress={() => Linking.openURL(this.props.currentUser.url)}
-            >
-              View your page on the web
-            </PickerRowItem>
-
-            <PickerRowItem
               topDivider
               onPress={this.handleLogout}
               label="Logout"

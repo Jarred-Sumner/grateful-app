@@ -4828,10 +4828,6 @@ react-native-tab-view@^1.0.0:
   dependencies:
     prop-types "^15.6.0"
 
-react-native-text-input-mask@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/react-native-text-input-mask/-/react-native-text-input-mask-0.8.0.tgz#30f0de0215644db10719c4b1d29610605fb57262"
-
 react-native-user-avatar@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-native-user-avatar/-/react-native-user-avatar-1.0.3.tgz#05c21317a632f8f6c36f56d264750161a7087b6e"

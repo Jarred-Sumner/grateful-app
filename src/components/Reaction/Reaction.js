@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderWidth: 1,
     borderColor: COLORS.MEDIUM_GRAY,
+    marginBottom: SPACING.NORMAL,
     paddingVertical: SPACING.XSMALL,
     paddingHorizontal: SPACING.NORMAL,
     alignSelf: "flex-start",

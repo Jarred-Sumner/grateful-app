@@ -18,7 +18,7 @@ export default class InputAccessoryView extends React.Component {
         kbInputRef={kbInputRef}
         trackInteractive
         ref={forwardRef}
-        requiresSameParentToManageScrollView={false}
+        requiresSameParentToManageScrollView
         manageScrollView
         scrollToFocusedInput={false}
         allowHitsOutsideBounds
@@ -29,7 +29,7 @@ export default class InputAccessoryView extends React.Component {
             : undefined
         }
         revealKeyboardInteractive={false}
-        addBottomView={false}
+        addBottomView
         renderContent={renderContent}
       />
     );
