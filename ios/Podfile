@@ -1,0 +1,77 @@
+# Uncomment the next line to define a global platform for your project
+
+target 'grateful' do
+  platform :ios, '9.0'
+  rn_path = '../node_modules/react-native'
+  pod 'yoga', path: "#{rn_path}/ReactCommon/yoga/yoga.podspec"
+  pod 'DoubleConversion', :podspec => "#{rn_path}/third-party-podspecs/DoubleConversion.podspec"
+  pod 'glog', :podspec => "#{rn_path}/third-party-podspecs/GLog.podspec"
+  pod 'Folly', :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec"
+
+  pod 'React', path: rn_path, subspecs: [
+    'ART',
+    'Core',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'CxxBridge', # Include this for RN >= 0.47
+    'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+  ]
+
+
+  pod 'AccountKit'
+
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+
+   pod 'RNAccountKit', :path => '../node_modules/react-native-facebook-account-kit/ios'
+
+pod 'react-native-camera', path: '../node_modules/react-native-camera'
+
+  pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
+
+  pod 'react-native-safari-view', :path => '../node_modules/react-native-safari-view'
+  pod 'Firebase/Core', '~> 5.3.0'
+
+  pod 'SentryReactNative', :path => '../node_modules/react-native-sentry'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+
+  pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
+
+  pod 'RNFirebase', path: '../node_modules/react-native-firebase/ios'
+
+
+  # pod 'react-native-blur', :path => '../node_modules/react-native-blur'
+
+  # pod 'react-native-fast-image', :path => '../node_modules/react-native-fast-image'
+
+  # pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
+  # pod 'react-native-amplitude-analytics', :path => '../node_modules/react-native-amplitude-analytics'
+
+  pod 'react-native-onesignal', :path => '../node_modules/react-native-onesignal'
+pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+
+end
+
+
+
+# very important to have, unless you removed React dependencies for Libraries
+# and you rely on Cocoapods to manage it
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
+end
